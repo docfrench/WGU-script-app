@@ -20,7 +20,7 @@ public:
 	int daysInCourse3{};
 	DegreeProgram degreeProgram{};
 	int rosterSize{};
-	Student* classRosterArray = new Student[10]; //arbitrary size to declare array; seems to break if too small?
+	Student* classRosterArray = new Student[10];
 
 	Roster(int rosterSize) {
 		delete[] classRosterArray;
@@ -49,7 +49,6 @@ public:
 		std::cout << std::endl;
 	}
 
-
 	void printAverageDaysInCourse(int rosterSize) 
 	{
 		std::cout << "Average Days in Course:" << std::endl;
@@ -63,13 +62,13 @@ public:
 	}
 
 	
-	std::string getDegreeProgramName(DegreeProgram input) { //translate enum --> str
+	std::string getDegreeProgramName(DegreeProgram input) { 
 		switch (input) {
 		case 0: return "SECURITY";
 		case 1: return "NETWORK";
 		case 2: return "SOFTWARE";
 		}
-	}
+	}//translate enum --> str
 
 	void printByDegreeProgram(DegreeProgram inputString, int rosterSize) {
 
@@ -83,7 +82,6 @@ public:
 		}
 		std::cout << std::endl;
 	}
-
 
 	void dataParse(const std::string dataIngest[], int rosterSize) {
 		int counter = 0;
@@ -132,7 +130,6 @@ public:
 		classRosterArray[record].setdaysInCourse3(daysInCourse3);
 		classRosterArray[record].setDegreeProgram(degreeProgram);
 	}
-
 
 	void remove(std::string studentID, int rosterSize) {
 		std::cout << "Removing student ID: " << studentID << std::endl;
@@ -193,8 +190,6 @@ public:
 	
 	~Roster() {
 		delete[] classRosterArray;
-		//std::cout << "destructor called" << std::endl;
+		std::cout << "destructor called" << std::endl;
 	}
-
-
 };

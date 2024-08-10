@@ -32,7 +32,7 @@ int main() {
 
 	classRoster.remove("A3", rosterSize);
 
-
+	classRoster.~Roster();
 
 	return 0;
 }
