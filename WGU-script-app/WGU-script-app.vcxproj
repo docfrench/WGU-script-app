@@ -129,8 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\main.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\frenc\source\repos\WGU-script-app\WGU-script-app;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    <ClCompile Include="main.cpp">
+
     </ClCompile>
     <ClCompile Include="roster.cpp" />
     <ClCompile Include="student.cpp" />
