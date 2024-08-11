@@ -11,9 +11,9 @@ class Student {
 		std::string lastName;
 		std::string emailAddress;
 		int Age;
-		int daysInCourse1;
-		int daysInCourse2;
-		int daysInCourse3;
+		int daysInCourse[3];
+		//int daysInCourse2;
+		//int daysInCourse3;
 		DegreeProgram degreeProgram;
 
 	public:
@@ -34,13 +34,13 @@ class Student {
 			return Age;
 		}
 		int getdaysInCourse1() {
-			return daysInCourse1;
+			return daysInCourse[0];
 		}
 		int getdaysInCourse2() {
-			return daysInCourse2;
+			return daysInCourse[1];
 		}
 		int getdaysInCourse3() {
-			return daysInCourse3;
+			return daysInCourse[2];
 		}
 		DegreeProgram getDegreeProgram() {
 			return degreeProgram;
@@ -57,7 +57,7 @@ class Student {
 			std::cout << "First Name: " << this->firstName << "\t";
 			std::cout << "Last Name: " << this->lastName << "\t";
 			std::cout << "Age: " << this->Age << "\t";
-			std::cout << "daysInCourse: { " << this->daysInCourse1 << ", " << this->daysInCourse2 << ", " << this->daysInCourse3 << " }\t";
+			std::cout << "daysInCourse: { " << this->daysInCourse[0] << ", " << this->daysInCourse[1] << ", " << this->daysInCourse[2] << " }\t";
 			std::cout << "Degree Program: " << getDegreeProgramName(this->degreeProgram) << "\t" << std::endl;
 		}
 
@@ -78,13 +78,13 @@ class Student {
 			this->Age = Age;
 		}
 		void setdaysInCourse1(int daysInCourse1) {
-			this->daysInCourse1 = daysInCourse1;
+			this->daysInCourse[0] = daysInCourse1;
 		}
 		void setdaysInCourse2(int daysInCourse2) {
-			this->daysInCourse2 = daysInCourse2;
+			this->daysInCourse[1] = daysInCourse2;
 		}
 		void setdaysInCourse3(int daysInCourse3) {
-			this->daysInCourse3 = daysInCourse3;
+			this->daysInCourse[2] = daysInCourse3;
 		}
 
 		void setDegreeProgram(DegreeProgram degreeProgram) {
@@ -99,9 +99,9 @@ class Student {
 			this->lastName = lastName;
 			this->emailAddress = emailAddress;
 			this->Age = Age;
-			this->daysInCourse1 = daysInCourse1;
-			this->daysInCourse2 = daysInCourse2;
-			this->daysInCourse3 = daysInCourse3;
+			this->daysInCourse[0] = daysInCourse1;
+			this->daysInCourse[1] = daysInCourse2;
+			this->daysInCourse[2] = daysInCourse3;
 			this->degreeProgram = degreeProgram;
 		}
 		Student() {
@@ -110,9 +110,9 @@ class Student {
 			this->lastName = "Test";
 			this->emailAddress = "no_emailAddress";
 			this->Age = 101;
-			this->daysInCourse1 = 4000;
-			this->daysInCourse2 = 20;
-			this->daysInCourse3 = 300;
+			this->daysInCourse[0] = 4000;
+			this->daysInCourse[1] = 20;
+			this->daysInCourse[2] = 300;
 			this->degreeProgram = { NETWORK };
 		}
 		

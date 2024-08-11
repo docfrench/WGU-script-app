@@ -15,9 +15,10 @@ public:
 	std::string lastName;
 	std::string emailAddress;
 	int Age{};
-	int daysInCourse1{};
-	int daysInCourse2{};
-	int daysInCourse3{};
+	int daysInCourse[3];
+	//int daysInCourse1{};
+	//int daysInCourse2{};
+	//int daysInCourse3{};
 	DegreeProgram degreeProgram{};
 	int rosterSize{};
 	Student* classRosterArray = new Student[10];
